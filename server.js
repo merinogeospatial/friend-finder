@@ -1,14 +1,15 @@
 // Dependencies
 // =============================================================
-var express = require("express");
-var bodyParser = require("body-parser");
-var path = require("path");
-var friends = require('./app/data/friends.js');
+const express = require("express");
+const bodyParser = require("body-parser");
+const path = require("path");
+let friends = require('./app/data/friends.js');
+console.log(friends);
 
 // Sets up the Express App
 // =============================================================
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Sets up the Express app to handle data parsing and point static to public
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -32,36 +33,20 @@ app.get("/api/friends", function(req, res) {
   return res.json(friends);
 });
 
-// Displays a single character, or returns false
-// app.get("/api/friends", function(req, res) {
-//   friends = req.params.character;
 
-//   console.log(chosen);
-
-//   for (var i = 0; i < characters.length; i++) {
-//     if (chosen === characters[i].routeName) {
-//       return res.json(characters[i]);
-//     }
-//   }
-
-//   return res.json(false);
-// });
-
-// Create New Characters - takes in JSON input
-app.post("/api/characters", function(req, res) {
+// Here we will want to create a new friend and do the calc comparison to find the most compatible friend.
+app.post("/api/friends", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body-parser middleware
-  var newcharacter = req.body;
+  var newfriend = req.body;
 
-  // Using a RegEx Pattern to remove spaces from newCharacter
-  // You can read more about RegEx Patterns later https://www.regexbuddy.com/regex.html
-  newcharacter.routeName = newcharacter.name.replace(/\s+/g, "").toLowerCase();
 
-  console.log(newcharacter);
 
-  characters.push(newcharacter);
+  console.log(newfriend);
 
-  res.json(newcharacter);
+  friends.push(newfriend);
+
+  res.json(newfriend);
 });
 
 // Starts the server to begin listening
