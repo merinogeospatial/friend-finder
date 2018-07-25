@@ -18,7 +18,7 @@
 
   <div class="container">
 
-    <h2>Survey Questions</h2>
+    <h2 class="text-center">Survey Questions</h2>
     <hr>
 
     <h3><strong>About You</strong></h3>
@@ -31,8 +31,8 @@
     <hr>
 
     <h3><strong>Question 1</strong></h3>
-    <h4>Your mind is always buzzing with unexplored ideas and plans.</h4>
-    <select class="chosen-select" id="q1">
+    <h4>I consider myself adventurous.</h4>
+    <select class="select" id="q1">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -42,8 +42,8 @@
     </select>
 
     <h3><strong>Question 2</strong></h3>
-    <h4>Generally speaking, you rely more on your experience than your imagination.</h4>
-    <select class="chosen-select" id="q2">
+    <h4>I think there is intelligent life beyong Earth.</h4>
+    <select class="select" id="q2">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -54,8 +54,8 @@
 
 
     <h3><strong>Question 3</strong></h3>
-    <h4>You find it easy to stay relaxed and focused even when there is some pressure.</h4>
-    <select class="chosen-select" id="q3">
+    <h4>I am easily peer-pressured.</h4>
+    <select class="select" id="q3">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -66,8 +66,8 @@
 
 
     <h3><strong>Question 4</strong></h3>
-    <h4>You rarely do something just out of sheer curiosity.</h4>
-    <select class="chosen-select" id="q4">
+    <h4>I rarely get stressed.</h4>
+    <select class="select" id="q4">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -78,8 +78,8 @@
 
 
     <h3><strong>Question 5</strong></h3>
-    <h4>People can rarely upset you.</h4>
-    <select class="chosen-select" id="q5">
+    <h4>I consider myself an introvert.</h4>
+    <select class="select" id="q5">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -90,8 +90,8 @@
 
 
     <h3><strong>Question 6</strong></h3>
-    <h4>It is often difficult for you to relate to other people’s feelings.</h4>
-    <select class="chosen-select" id="q6">
+    <h4>I am open minded.</h4>
+    <select class="select" id="q6">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -102,8 +102,8 @@
 
 
     <h3><strong>Question 7</strong></h3>
-    <h4>In a discussion, truth should be more important than people’s sensitivities.</h4>
-    <select class="chosen-select" id="q7">
+    <h4>The most important thing in life is family.</h4>
+    <select class="select" id="q7">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -113,8 +113,8 @@
     </select>
 
     <h3><strong>Question 8</strong></h3>
-    <h4>You rarely get carried away by fantasies and ideas.</h4>
-    <select class="chosen-select" id="q8">
+    <h4>I consider myself a creative person.</h4>
+    <select class="select" id="q8">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -124,8 +124,8 @@
     </select>
 
     <h3><strong>Question 9</strong></h3>
-    <h4>You think that everyone’s views should be respected regardless of whether they are supported by facts or not.</h4>
-    <select class="chosen-select" id="q9">
+    <h4>I prefer Netflix over partying.</h4>
+    <select class="select" id="q9">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -135,8 +135,8 @@
     </select>
 
     <h3><strong>Question 10</strong></h3>
-    <h4>You feel more energetic after spending time with a group of people.</h4>
-    <select class="chosen-select" id="q10">
+    <h4>I am genuinely happy.</h4>
+    <select class="select" id="q10">
       <option value=""></option>
       <option value="1">1 (Strongly Disagree)</option>
       <option value="2">2</option>
@@ -169,7 +169,7 @@
       <div class="modal-content">
         <div class="modal-header">
           <button type="button" class="close" data-dismiss="modal">&times;</button>
-          <h2 class="modal-title"><strong>Best Match</strong></h2>
+          <h2 class="modal-title"><strong>Based on your score, your best match is...</strong></h2>
         </div>
         <div class="modal-body">
           <h2 id="match-name"></h2>
@@ -184,26 +184,7 @@
   </div>
 
   <script type="text/javascript">
-    // Chosen CSS
-    var config = {
-      ".chosen-select": {},
-      ".chosen-select-deselect": {
-        allow_single_deselect: true
-      },
-      ".chosen-select-no-single": {
-        disable_search_threshold: 10
-      },
-      ".chosen-select-no-results": {
-        no_results_text: "Oops, nothing found!"
-      },
-      ".chosen-select-width": {
-        width: "95%"
-      }
-    };
-
-    for (var selector in config) {
-      $(selector).chosen(config[selector]);
-    }
+ 
 
     // Capture the form inputs
     $("#submit").on("click", function(event) {
@@ -218,7 +199,7 @@
           }
         });
 
-        $(".chosen-select").each(function() {
+        $(".select").each(function() {
 
           if ($(this).val() === "") {
             isValid = false;
