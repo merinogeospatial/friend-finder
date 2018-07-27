@@ -38,11 +38,34 @@ app.get("/api/friends", function(req, res) {
 app.post("/api/friends", function(req, res) {
   // req.body hosts is equal to the JSON post sent from the user
   // This works because of our body-parser middleware
-  var newfriend = req.body;
+  let newfriend = req.body;
 
+  console.log("target:", friends[0].scores);
 
+////
+  let a;
+  let b;
+  let x = [];
 
-  console.log(newfriend);
+  b = newfriend.scores;
+    console.log(a +" | " +b);
+
+  for (let i = 0; i < friends.length; i++) {
+
+    a = friends[i].scores;
+    let total = 0;
+
+    for (let j = 0; j < 9; j++) {
+      total += Math.abs(a[j]-b[j]);
+    }
+
+    x.push(total);
+
+  }
+
+ /// Put a for loop here to get the first lowest value, then save that index to call a match
+  
+  console.log(x);
 
   friends.push(newfriend);
 
@@ -54,3 +77,11 @@ app.post("/api/friends", function(req, res) {
 app.listen(PORT, function() {
   console.log("App listening on PORT " + PORT);
 });
+
+
+// function to compare scores
+// function compare(friendIndex, newfriend, array) {
+//   for (let j = 0; j < friendIndex.scores.length; j++) {
+//     array.push(Math.abs(friendIndex.scores[j]-newfriend.scores[j]));
+//   }
+// }
