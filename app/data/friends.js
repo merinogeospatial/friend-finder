@@ -1,7 +1,7 @@
 let friends = 
     [{
         "name":"Ahmed",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"photo here",
         "scores":[
             1,
             2,
@@ -17,7 +17,7 @@ let friends =
     },
     {
         "name":"Kayla",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"photo here",
         "scores":[
             5,
             1,
@@ -33,7 +33,7 @@ let friends =
     },
     {
         "name":"Richard",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"photo here",
         "scores":[
             5,
             1,
@@ -49,7 +49,7 @@ let friends =
     },
     {
         "name":"Nic",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"photo here",
         "scores":[
             5,
             5,
@@ -65,7 +65,7 @@ let friends =
     },
     {
         "name":"Ricky Bobby",
-        "photo":"https://media.licdn.com/mpr/mpr/shrinknp_400_400/p/6/005/064/1bd/3435aa3.jpg",
+        "photo":"photo here",
         "scores":[
             1,
             1,

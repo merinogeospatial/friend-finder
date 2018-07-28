@@ -62,7 +62,7 @@ app.post("/api/friends", function(req, res) {
   console.log(x);
 
  /// Put a for loop here to get the first lowest value, then save that index to call a match
-  chosenFriend = x.indexOf(Math.min.apply(Math, x));
+  chosenFriend = friends[x.indexOf(Math.min.apply(Math, x))];
 
   console.log(chosenFriend);
 /// Add friend to data
