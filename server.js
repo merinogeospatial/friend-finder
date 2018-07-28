@@ -42,13 +42,11 @@ app.post("/api/friends", function(req, res) {
 
   console.log("target:", friends[0].scores);
 
-////
   let a;
   let b;
   let x = [];
 
   b = newfriend.scores;
-    console.log(a +" | " +b);
 
   for (let i = 0; i < friends.length; i++) {
 
@@ -60,16 +58,18 @@ app.post("/api/friends", function(req, res) {
     }
 
     x.push(total);
-
   }
-
- /// Put a for loop here to get the first lowest value, then save that index to call a match
-  
   console.log(x);
 
+ /// Put a for loop here to get the first lowest value, then save that index to call a match
+  chosenFriend = x.indexOf(Math.min.apply(Math, x));
+
+  console.log(chosenFriend);
+/// Add friend to data
   friends.push(newfriend);
 
-  res.json(newfriend);
+ /// Have the chose friend be the response 
+  res.json(chosenFriend);
 });
 
 // Starts the server to begin listening
@@ -79,9 +79,3 @@ app.listen(PORT, function() {
 });
 
 
-// function to compare scores
-// function compare(friendIndex, newfriend, array) {
-//   for (let j = 0; j < friendIndex.scores.length; j++) {
-//     array.push(Math.abs(friendIndex.scores[j]-newfriend.scores[j]));
-//   }
-// }
