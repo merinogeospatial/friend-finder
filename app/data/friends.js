@@ -1,7 +1,7 @@
 let friends = 
     [{
         "name":"Ahmed",
-        "photo":"photo here",
+        "photo":"https://pbs.twimg.com/profile_images/629686624008278020/aZA3c3RX_400x400.jpg",
         "scores":[
             1,
             2,
@@ -17,7 +17,7 @@ let friends =
     },
     {
         "name":"Kayla",
-        "photo":"photo here",
+        "photo":"https://m.media-amazon.com/images/M/MV5BZDYwMjIxZTgtMjZiMi00ODk2LTgxNTctMmZmOWM5YmI2NWYzXkEyXkFqcGdeQXVyNjA1NjMyMjI@._V1_UX214_CR0,0,214,317_AL_.jpg",
         "scores":[
             5,
             1,
@@ -33,7 +33,7 @@ let friends =
     },
     {
         "name":"Richard",
-        "photo":"photo here",
+        "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/2/24/Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679_%283x4%29.jpg/220px-Richard_M._Nixon%2C_ca._1935_-_1982_-_NARA_-_530679_%283x4%29.jpg",
         "scores":[
             5,
             1,
@@ -49,7 +49,7 @@ let friends =
     },
     {
         "name":"Nic",
-        "photo":"photo here",
+        "photo":"https://upload.wikimedia.org/wikipedia/commons/thumb/c/c0/Nicolas_Cage_Deauville_2013.jpg/220px-Nicolas_Cage_Deauville_2013.jpg",
         "scores":[
             5,
             5,
@@ -65,7 +65,7 @@ let friends =
     },
     {
         "name":"Ricky Bobby",
-        "photo":"photo here",
+        "photo":"https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-talladega-nights-the-ballad-of-ricky-bobby-will-ferrell.jpg",
         "scores":[
             1,
             1,
